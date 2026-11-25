@@ -1,0 +1,78 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+  background: light-dark(#f1f5f9, #0f172a);
+  color: light-dark(#0f172a, #e2e8f0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  border-radius: 12px;
+  background: light-dark(#ffffff, #1e293b);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 12%);
+}
+
+h1 {
+  margin-top: 0;
+  overflow-wrap: anywhere;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+input,
+button {
+  font: inherit;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+input {
+  border: 1px solid light-dark(#cbd5e1, #475569);
+  background: transparent;
+  color: inherit;
+}
+
+button {
+  border: 0;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+a {
+  color: light-dark(#2563eb, #93c5fd);
+}
+
+.error {
+  margin: 0;
+  color: light-dark(#b91c1c, #fca5a5);
+}

@@ -1,0 +1,17 @@
+{
+  "name": "web-example1",
+  "private": true,
+  "workspaces": ["client", "server"],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"npm run start:dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client && npm run build -w server",
+    "start": "npm run start:prod -w server",
+    "test": "npm test -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
